@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+// import Calcu from './Calcu';
+import { add, subtract, multiply, divide } from './Calcu'
+// import {subtract} from './Calcu'
+// import {multiply} from './Calcu'
+// import {divide} from './Calcu'
+import css from './index.css'
+ReactDOM.render(
+  <>
+  <ul>
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <li>The sum of two numbers is {add(20,52)}</li>
+  <li>The subtract of two numbers is {subtract(44,20)}</li>
+  <li>The multiplication of two numbers is {multiply(44,20)}</li>
+  <li>The division of two numbers is {divide(44,3)}</li>
+  </ul>
+  </>,
+
+document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
